@@ -16,16 +16,16 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.kaupenjoe.mccourse.MCCourseMod"
+			"net.bersanito.mccourse.MCCourseMod"
 		],
 		"fabric-datagen": [
-			"net.kaupenjoe.mccourse.MCCourseModDataGenerator"
+			"net.bersanito.mccourse.MCCourseModDataGenerator"
 		],
 		"client": [
-			"net.kaupenjoe.mccourse.MCCourseModClient"
+			"net.bersanito.mccourse.MCCourseModClient"
 		],
 		"rei_client": [
-			"net.kaupenjoe.mccourse.compat.MCCourseModREIClientPlugin"
+			"net.bersanito.mccourse.compat.MCCourseModREIClientPlugin"
 		]
 	},
 	"mixins": [

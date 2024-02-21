@@ -1,8 +1,11 @@
 package net.bersanito.mccourse.util;
 
+import net.bersanito.mccourse.entity.ModEntities;
+import net.bersanito.mccourse.entity.custom.PorcupineEntity;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -33,12 +36,17 @@ public class ModRegistries {
         registerCustomTrades();
         registerStrippables();
         registerFlammables();
+        registerAttributes();
     }
 
     private static void registerFuels() {
         FuelRegistry registry = FuelRegistry.INSTANCE;
 
         registry.add(ModItems.PEAT_BRICK, 200);
+    }
+
+    public static void registerAttributes() {
+        FabricDefaultAttributeRegistry.register(ModEntities.PORCUPINE, PorcupineEntity.createPorcupineAttributes());
     }
 
     private static void registerModCompostables() {

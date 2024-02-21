@@ -1,5 +1,6 @@
 package net.bersanito.mccourse;
 
+import net.bersanito.mccourse.entity.ModEntities;
 import net.bersanito.mccourse.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -53,5 +54,7 @@ public class MCCourseMod implements ModInitializer {
 
 		ModRecipes.registerRecipes();
 		ModWorldGeneration.generateModWorldGeneration();
+
+		ModEntities.registerModEntities();
 	}
 }

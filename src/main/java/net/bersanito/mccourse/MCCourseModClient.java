@@ -1,5 +1,9 @@
 package net.bersanito.mccourse;
 
+import net.bersanito.mccourse.entity.ModEntities;
+import net.bersanito.mccourse.entity.client.PorcupineModel;
+import net.bersanito.mccourse.entity.client.PorcupineRenderer;
+import net.bersanito.mccourse.entity.layer.ModModelLayers;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
@@ -17,12 +21,16 @@ import net.bersanito.mccourse.screen.GemEmpoweringScreen;
 import net.bersanito.mccourse.screen.ModScreenHandlers;
 import net.bersanito.mccourse.util.ModModelPredicateProvider;
 import net.bersanito.mccourse.util.ModWoodTypes;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.block.entity.HangingSignBlockEntityRenderer;
 import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
+import net.minecraft.client.render.entity.model.EntityModel;
+import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.util.ModelIdentifier;
 
 public class MCCourseModClient implements ClientModInitializer {
@@ -57,5 +65,8 @@ public class MCCourseModClient implements ClientModInitializer {
         BlockEntityRendererFactories.register(ModBlockEntities.MOD_HANGING_SIGN_BLOCK_ENTITY, HangingSignBlockEntityRenderer::new);
 
         TexturedRenderLayers.SIGN_TYPE_TEXTURES.put(ModWoodTypes.DRIFTWOOD, TexturedRenderLayers.getSignTextureId(ModWoodTypes.DRIFTWOOD));
+
+        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.PORCUPINE, PorcupineModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.PORCUPINE, PorcupineRenderer::new);
     }
 }

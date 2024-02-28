@@ -1,5 +1,6 @@
 package net.bersanito.mccourse.world.gen;
 
+
 public class ModWorldGeneration {
     public static void generateModWorldGeneration() {
         ModOreGeneration.generateOres();
@@ -7,6 +8,8 @@ public class ModWorldGeneration {
         ModTreeGeneration.generateTrees();
 
         ModFlowerGeneration.generateFlowers();
+
+        ModEntitySpawns.addSpawns();
 
     }
 }

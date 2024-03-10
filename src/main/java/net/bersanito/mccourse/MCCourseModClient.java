@@ -1,6 +1,8 @@
 package net.bersanito.mccourse;
 
 import net.bersanito.mccourse.entity.ModEntities;
+import net.bersanito.mccourse.entity.client.MagicProjectileModel;
+import net.bersanito.mccourse.entity.client.MagicProjectileRenderer;
 import net.bersanito.mccourse.entity.client.PorcupineModel;
 import net.bersanito.mccourse.entity.client.PorcupineRenderer;
 import net.bersanito.mccourse.entity.layer.ModModelLayers;
@@ -71,5 +73,8 @@ public class MCCourseModClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.PORCUPINE, PorcupineRenderer::new);
 
         EntityRendererRegistry.register(ModEntities.THROWN_DICE_PROJECTILE, FlyingItemEntityRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.MAGIC_PROJECTILE, MagicProjectileModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.MAGIC_PROJECTILE, MagicProjectileRenderer::new);
     }
 }

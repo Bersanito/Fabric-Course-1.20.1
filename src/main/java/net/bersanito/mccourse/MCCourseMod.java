@@ -2,6 +2,7 @@ package net.bersanito.mccourse;
 
 import net.bersanito.mccourse.entity.ModEntities;
 import net.bersanito.mccourse.world.gen.ModWorldGeneration;
+import net.bersanito.mccourse.world.tree.ModTrunkPlacerTypes;
 import net.fabricmc.api.ModInitializer;
 
 import net.bersanito.mccourse.block.ModBlocks;
@@ -56,5 +57,7 @@ public class MCCourseMod implements ModInitializer {
 		ModWorldGeneration.generateModWorldGeneration();
 
 		ModEntities.registerModEntities();
+
+		ModTrunkPlacerTypes.register();
 	}
 }

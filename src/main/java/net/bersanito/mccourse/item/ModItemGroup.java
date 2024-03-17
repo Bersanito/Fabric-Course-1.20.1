@@ -49,6 +49,9 @@ public class ModItemGroup {
 
                         entries.add(ModItems.DICE);
 
+                        entries.add(ModItems.DRIFTWOOD_BOAT);
+                        entries.add(ModItems.DRIFTWOOD_CHEST_BOAT);
+
                        entries.add(ModFluids.SOAP_WATER_BUCKET);
 
 

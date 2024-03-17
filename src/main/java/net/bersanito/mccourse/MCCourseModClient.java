@@ -1,5 +1,7 @@
 package net.bersanito.mccourse;
 
+import com.terraformersmc.terraform.boat.api.client.TerraformBoatClientHelper;
+import net.bersanito.mccourse.entity.ModBoats;
 import net.bersanito.mccourse.entity.ModEntities;
 import net.bersanito.mccourse.entity.client.MagicProjectileModel;
 import net.bersanito.mccourse.entity.client.MagicProjectileRenderer;
@@ -76,5 +78,7 @@ public class MCCourseModClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.MAGIC_PROJECTILE, MagicProjectileModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.MAGIC_PROJECTILE, MagicProjectileRenderer::new);
+
+        TerraformBoatClientHelper.registerModelLayers(ModBoats.DRIFTWOOD_BOAT_ID, false);
     }
 }

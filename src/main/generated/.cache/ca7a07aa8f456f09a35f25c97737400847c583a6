@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-16T23:46:37.467043	MC Course Mod/Model Definitions
+// 1.20.1	2024-03-17T20:46:56.0962608	MC Course Mod/Model Definitions
 4873857054e85b5f497316b381a525f21da3e9c9 assets\mccourse\models\item\pink_garnet_wall.json
 8cb02e7945fb1fdea3c031968d0bfe1ee183ca63 assets\mccourse\models\block\pink_garnet_fence_inventory.json
 1dad798f06050d9284deca4dcb1017c9367b48e3 assets\mccourse\models\item\pink_garnet_helmet.json
@@ -64,12 +64,13 @@ bcde24a898152896a04d9c1d664cddbfb6f10383 assets\mccourse\models\block\pink_garne
 5b8a18781190e3ccb7b4bee37a35aa24a14c47f6 assets\mccourse\models\block\sound_block.json
 6ca8824a9163057c96fb23a47f52a187589047df assets\mccourse\models\block\cauliflower_crop_stage4.json
 7c9dd404736195c7921e786c004398a5ebae3da0 assets\mccourse\blockstates\nether_pink_garnet_ore.json
-ed45f98edb97bd0132a2c8c9a71134188817d9d3 assets\mccourse\models\item\pink_garnet_chestplate_iron_trim.json
 615fc22198dc1e7267d2506778618863d3609259 assets\mccourse\models\block\pink_garnet_ore.json
+ed45f98edb97bd0132a2c8c9a71134188817d9d3 assets\mccourse\models\item\pink_garnet_chestplate_iron_trim.json
 3fd1f557cbc8c6c514ecaa042ff228b8b580ce17 assets\mccourse\models\item\raw_pink_garnet_block.json
 cf3bc4a2eb9b4af5e8a8e7288e9b13238a631610 assets\mccourse\models\item\end_stone_pink_garnet_ore.json
 a21b2c9782eca392b7818ed9cfdb9726de88dc6f assets\mccourse\models\block\pink_garnet_wall_post.json
 2aaabb21742bcdd08a5fdd12104e9ace9f8328d3 assets\mccourse\models\item\pink_garnet_boots_diamond_trim.json
+1ad72dbe4129aed4b9cf944dcaa5c20b3589aa12 assets\mccourse\models\item\driftwood_chest_boat.json
 ea01920be1c4005c1819baf5e20b13bd04d21081 assets\mccourse\blockstates\pink_garnet_lamp_block.json
 485fca1229e39e98b49f76e0ff19a5fcfd14a8aa assets\mccourse\models\block\driftwood_planks.json
 e9f87455724f6a643e2a058ae695b5a970b56023 assets\mccourse\models\block\pink_garnet_lamp_block_on.json
@@ -104,6 +105,7 @@ b0b48855d7b72cf8ef71457164f502c56f47fbc8 assets\mccourse\models\item\pink_garnet
 209512dbed7df0c0cee2c76ddc1de52a0fe439f9 assets\mccourse\models\block\pink_garnet_button_pressed.json
 69f14bc527b8fd908153ba18e4c2e2a0b027fa4f assets\mccourse\models\item\peat_brick.json
 441a5abe6f5724f18d8769cfaf6b73e8ef23eee4 assets\mccourse\models\block\pink_garnet_stairs_outer.json
+dcaf26ba6015ed1debc4e6d8baa75705341a6fc4 assets\mccourse\models\item\driftwood_boat.json
 882c909d777501be9a665907319c212c6837ebd6 assets\mccourse\models\item\bar_brawl_music_disc.json
 6e545d6e6f2b80df5760a660a6e1e7ffa10467ee assets\mccourse\models\block\stripped_driftwood_wood.json
 474eab744dd2c80808586f8d493885dd3e852ba9 assets\mccourse\models\item\cauliflower.json

@@ -1,5 +1,6 @@
 package net.bersanito.mccourse;
 
+import net.bersanito.mccourse.entity.ModBoats;
 import net.bersanito.mccourse.entity.ModEntities;
 import net.bersanito.mccourse.world.gen.ModWorldGeneration;
 import net.bersanito.mccourse.world.tree.ModFoliagePlacerTypes;
@@ -61,5 +62,7 @@ public class MCCourseMod implements ModInitializer {
 
 		ModTrunkPlacerTypes.register();
 		ModFoliagePlacerTypes.register();
+
+		ModBoats.registerBoats();
 	}
 }

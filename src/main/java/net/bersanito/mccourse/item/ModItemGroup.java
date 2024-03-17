@@ -49,6 +49,9 @@ public class ModItemGroup {
 
                         entries.add(ModItems.DICE);
 
+                        entries.add(ModItems.CATTAIL_SEEDS);
+                        entries.add(ModItems.CATTAIL);
+
                         entries.add(ModItems.DRIFTWOOD_BOAT);
                         entries.add(ModItems.DRIFTWOOD_CHEST_BOAT);
 
@@ -87,6 +90,8 @@ public class ModItemGroup {
                        entries.add(ModBlocks.DRIFTWOOD_PLANKS);
                        entries.add(ModBlocks.DRIFTWOOD_SAPLING);
                        entries.add(ModBlocks.DRIFTWOOD_LEAVES);
+
+                       entries.add(ModBlocks.COLORED_LEAVES);
 
                     }).build());
 

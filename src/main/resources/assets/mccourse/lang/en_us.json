@@ -37,6 +37,12 @@
   "item.mccourse.porcupine_spawn_egg": "Porcupine Spawn Egg",
 
   "item.mccourse.dice": "Dice",
+
+
+  "item.mccourse.cattail_seeds": "Cattail Seeds",
+  "item.mccourse.cattail": "Cattail",
+
+
   "item.mccourse.driftwood_boat": "Driftwood Boat",
   "item.mccourse.driftwood_chest_boat": "Driftwood Chest Boat",
 
@@ -74,6 +80,8 @@
 
   "block.mccourse.driftwood_sign": "Driftwood Sign",
   "block.mccourse.driftwood_hanging_sign": "Driftwood Hanging Sign",
+
+  "block.mccourse.colored_leaves": "Colored Leaves",
 
   "item.mccourse.metal_detector.no_valuables": "No Valuables Found!",
 

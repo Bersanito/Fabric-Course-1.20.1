@@ -104,6 +104,12 @@ public class ModBlocks {
     public static final Block DICE_BLOCK = registerBlockWithoutBlockItem("dice_block",
             new DiceBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
 
+    public static final Block CATTAIL_CROP = registerBlockWithoutBlockItem("cattail_crop",
+            new CattailCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    public static final Block COLORED_LEAVES = registerBlock("colored_leaves",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(MCCourseMod.MOD_ID, name), block);
     }

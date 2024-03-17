@@ -1,5 +1,6 @@
 package net.bersanito.mccourse.datagen;
 
+import net.bersanito.mccourse.block.custom.CattailCropBlock;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.bersanito.mccourse.block.ModBlocks;
@@ -66,6 +67,10 @@ public class ModModelProvider extends FabricModelProvider {
         Identifier identifier2 = blockStateModelGenerator.createSubModel(ModBlocks.PINK_GARNET_LAMP_BLOCK, "_on", Models.CUBE_ALL, TextureMap::all);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(ModBlocks.PINK_GARNET_LAMP_BLOCK)
                 .coordinate(BlockStateModelGenerator.createBooleanModelMap(PinkGarnetLampBlock.CLICKED, identifier2, identifier)));
+
+        blockStateModelGenerator.registerCrop(ModBlocks.CATTAIL_CROP, CattailCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7, 8);
+
+        blockStateModelGenerator.registerSingleton(ModBlocks.COLORED_LEAVES, TexturedModel.LEAVES);
     }
 
     @Override
@@ -97,6 +102,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.DRIFTWOOD_BOAT, Models.GENERATED);
         itemModelGenerator.register(ModItems.DRIFTWOOD_CHEST_BOAT, Models.GENERATED);
+
+
+        itemModelGenerator.register(ModItems.CATTAIL, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.PORCUPINE_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));

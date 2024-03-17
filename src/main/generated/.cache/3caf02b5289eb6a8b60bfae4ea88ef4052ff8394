@@ -1,5 +1,6 @@
-// 1.20.1	2024-03-17T20:46:56.1299419	MC Course Mod/Block Loot Tables
+// 1.20.1	2024-03-17T21:55:15.5927364	MC Course Mod/Block Loot Tables
 e061188b49c3ecac5a41445d689a3ec3fa8595ae data\mccourse\loot_tables\blocks\pink_garnet_pressure_plate.json
+b8cdd15d403a1820499590999f323f3e67eb9269 data\mccourse\loot_tables\blocks\cattail_crop.json
 d9244855f90021e3a7f7197892650c544fe7c846 data\mccourse\loot_tables\blocks\pink_garnet_slab.json
 dc482dcc4f5cbc24a3668a70c282bd166353a616 data\mccourse\loot_tables\blocks\pink_garnet_trapdoor.json
 b3c77a3b71b18920b7ddd7373aec394fa3401084 data\mccourse\loot_tables\blocks\pink_garnet_door.json

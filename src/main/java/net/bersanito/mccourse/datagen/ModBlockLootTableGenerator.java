@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.bersanito.mccourse.block.ModBlocks;
 import net.bersanito.mccourse.block.custom.CauliflowerCropBlock;
 import net.bersanito.mccourse.item.ModItems;
+import net.minecraft.loot.condition.AnyOfLootCondition;
 import net.minecraft.loot.condition.BlockStatePropertyLootCondition;
 import net.minecraft.predicate.StatePredicate;
 
@@ -38,6 +39,16 @@ public class ModBlockLootTableGenerator extends FabricBlockLootTableProvider {
                 .properties(StatePredicate.Builder.create().exactMatch(CauliflowerCropBlock.AGE, 6));
         this.addDrop(ModBlocks.CAULIFLOWER_CROP, this.cropDrops(ModBlocks.CAULIFLOWER_CROP, ModItems.CAULIFLOWER, ModItems.CAULIFLOWER_SEEDS, builder2));
 
+// IF YOU ONLY WANT THE ITEM TO DROP FROM THE TOP BLOCK
+        // BlockStatePropertyLootCondition.Builder builder3 = BlockStatePropertyLootCondition.builder(ModBlocks.CATTAIL_CROP)
+        //         .properties(StatePredicate.Builder.create().exactMatch(CauliflowerCropBlock.AGE, 8));
+        // this.addDrop(ModBlocks.CATTAIL_CROP, this.cropDrops(ModBlocks.CATTAIL_CROP, ModItems.CATTAIL, ModItems.CATTAIL_SEEDS, builder3));
 
+        AnyOfLootCondition.Builder builder =
+                BlockStatePropertyLootCondition.builder(ModBlocks.CATTAIL_CROP).properties(StatePredicate.Builder.create()
+                                .exactMatch(CauliflowerCropBlock.AGE, 7))
+                        .or(BlockStatePropertyLootCondition.builder(ModBlocks.CATTAIL_CROP).properties(StatePredicate.Builder.create()
+                                .exactMatch(CauliflowerCropBlock.AGE, 8)));
+        addDrop(ModBlocks.CATTAIL_CROP, cropDrops(ModBlocks.CATTAIL_CROP, ModItems.CATTAIL, ModItems.CATTAIL_SEEDS, builder));
     }
 }

@@ -1,5 +1,6 @@
 package net.bersanito.mccourse.util;
 
+import net.bersanito.mccourse.MCCourseMod;
 import net.bersanito.mccourse.entity.ModEntities;
 import net.bersanito.mccourse.entity.custom.PorcupineEntity;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
@@ -19,10 +20,12 @@ import net.bersanito.mccourse.item.ModItems;
 import net.bersanito.mccourse.mixin.BrewingRecipeRegistryMixin;
 import net.bersanito.mccourse.potion.ModPotions;
 import net.bersanito.mccourse.villager.ModVillagers;
+import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.ComposterBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
+import net.minecraft.util.Identifier;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.VillagerProfession;
 
@@ -37,6 +40,16 @@ public class ModRegistries {
         registerStrippables();
         registerFlammables();
         registerAttributes();
+        createPortal();
+    }
+
+    private static void createPortal() {
+        CustomPortalBuilder.beginPortal()
+                .frameBlock(ModBlocks.PINK_GARNET_BLOCK)
+                .lightWithItem(ModItems.CATTAIL)
+                .destDimID(new Identifier(MCCourseMod.MOD_ID, "kaupendim"))
+                .tintColor(0xc76efa)
+                .registerPortal();
     }
 
     private static void registerFuels() {

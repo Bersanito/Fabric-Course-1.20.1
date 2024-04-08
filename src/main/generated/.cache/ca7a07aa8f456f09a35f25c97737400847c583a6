@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-08T18:24:55.8903891	MC Course Mod/Model Definitions
+// 1.20.1	2024-04-08T20:21:58.8716897	MC Course Mod/Model Definitions
 4873857054e85b5f497316b381a525f21da3e9c9 assets\mccourse\models\item\pink_garnet_wall.json
 1dad798f06050d9284deca4dcb1017c9367b48e3 assets\mccourse\models\item\pink_garnet_helmet.json
 8cb02e7945fb1fdea3c031968d0bfe1ee183ca63 assets\mccourse\models\block\pink_garnet_fence_inventory.json
@@ -119,8 +119,8 @@ f02e0356dccacdf25fb28edbbbb2a77c529a03c7 assets\mccourse\models\item\pink_garnet
 00399314ad174d2fd1965573c5e96431e4bad359 assets\mccourse\models\block\pink_garnet_slab_top.json
 f5bc006c1110a6aeae7b9b942bd3b70786658ff7 assets\mccourse\models\item\pink_garnet_chestplate_netherite_trim.json
 021f1d1a1245ab56cd58c29e4f59c8efff81a505 assets\mccourse\blockstates\driftwood_hanging_sign.json
-a90d995e4268516359efc932a8d15d9ca59c1018 assets\mccourse\models\item\nether_pink_garnet_ore.json
 711c17655647c322b774c36c177f8fa6541501e5 assets\mccourse\models\item\pink_garnet_slab.json
+a90d995e4268516359efc932a8d15d9ca59c1018 assets\mccourse\models\item\nether_pink_garnet_ore.json
 d0f09b429cc19a7dcb228417502b849ba0acfd49 assets\mccourse\models\block\cattail_crop_stage8.json
 8120f084d67592f69eb7c2dc0ef8dd86102b64c4 assets\mccourse\models\item\pink_garnet_leggings.json
 dffd8f34420653012700c3054a8598ea31e7cb29 assets\mccourse\models\item\pink_garnet_lamp_block.json

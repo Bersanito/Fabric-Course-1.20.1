@@ -1,8 +1,8 @@
-// 1.20.1	2024-03-17T21:55:15.5853893	MC Course Mod/Recipes
+// 1.20.1	2024-04-08T18:24:55.9201331	MC Course Mod/Recipes
 93660bb70b019785b7b4e90069f659f6dab03730 data\mccourse\advancements\recipes\misc\pink_garnet_from_smelting_end_stone_pink_garnet_ore.json
 9d090c423fbd2ece47c9b72a5cfca9d7a379ee58 data\mccourse\advancements\recipes\end_rod.json
-6427ebc2bce0f025ebbaf985337638e3a966bf5b data\mccourse\advancements\recipes\misc\pink_garnet_from_blasting_raw_pink_garnet.json
 5d1322fdc5df75a55038d65ed9039759f6eae6a3 data\mccourse\recipes\pink_garnet_from_smelting_nether_pink_garnet_ore.json
+6427ebc2bce0f025ebbaf985337638e3a966bf5b data\mccourse\advancements\recipes\misc\pink_garnet_from_blasting_raw_pink_garnet.json
 a7e20f2134a8770eaadc4e2bf51796c929adfd51 data\mccourse\recipes\pink_garnet_from_blasting_raw_pink_garnet.json
 6dc4488ab1d9e1b8c34cb98a93f4c6344eaffa8e data\mccourse\advancements\recipes\misc\pink_garnet_block.json
 4c1a57d89e28f47a82d8c8b7bbe422c25fd13811 data\mccourse\recipes\pink_garnet_from_smelting_deepslate_pink_garnet_ore.json

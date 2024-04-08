@@ -26,6 +26,9 @@
 		],
 		"rei_client": [
 			"net.bersanito.mccourse.compat.MCCourseModREIClientPlugin"
+		],
+		"terrablender": [
+			"net.bersanito.mccourse.world.biome.ModTerraBlenderAPI"
 		]
 	},
 	"mixins": [

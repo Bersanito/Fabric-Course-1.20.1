@@ -1,7 +1,5 @@
 package net.bersanito.mccourse.recipe;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -10,8 +8,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.*;
 import net.minecraft.registry.DynamicRegistryManager;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.JsonHelper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.dynamic.Codecs;
 import net.minecraft.world.World;
@@ -21,10 +17,14 @@ import java.util.List;
 public class GemEmpoweringRecipe implements Recipe<SimpleInventory> {
     private final ItemStack output;
     private final List<Ingredient> recipeItems;
+    private final int craftTime;
+    private final int energyAmount;
 
-    public GemEmpoweringRecipe(List<Ingredient> recipeItems, ItemStack output) {
+    public GemEmpoweringRecipe(List<Ingredient> recipeItems, ItemStack output, int craftTime, int energyAmount) {
         this.output = output;
         this.recipeItems = recipeItems;
+        this.craftTime = craftTime;
+        this.energyAmount = energyAmount;
     }
 
     @Override
@@ -49,6 +49,14 @@ public class GemEmpoweringRecipe implements Recipe<SimpleInventory> {
     @Override
     public ItemStack getResult(DynamicRegistryManager registryManager) {
         return output;
+    }
+
+    public int getCraftTime() {
+        return craftTime;
+    }
+
+    public int getEnergyAmount() {
+        return energyAmount;
     }
 
     @Override
@@ -81,7 +89,9 @@ public class GemEmpoweringRecipe implements Recipe<SimpleInventory> {
 
         public static final Codec<GemEmpoweringRecipe> CODEC = RecordCodecBuilder.create(in -> in.group(
                 validateAmount(Ingredient.DISALLOW_EMPTY_CODEC, 9).fieldOf("ingredients").forGetter(GemEmpoweringRecipe::getIngredients),
-                RecipeCodecs.CRAFTING_RESULT.fieldOf("output").forGetter(r -> r.output)
+                RecipeCodecs.CRAFTING_RESULT.fieldOf("output").forGetter(r -> r.output),
+                Codecs.POSITIVE_INT.fieldOf("craftTime").forGetter(r -> r.craftTime),
+                Codecs.POSITIVE_INT.fieldOf("energyAmount").forGetter(r -> r.energyAmount)
         ).apply(in, GemEmpoweringRecipe::new));
 
         private static Codec<List<Ingredient>> validateAmount(Codec<Ingredient> delegate, int max) {
@@ -103,8 +113,10 @@ public class GemEmpoweringRecipe implements Recipe<SimpleInventory> {
                 inputs.set(i, Ingredient.fromPacket(buf));
             }
 
+            int craftTime = buf.readInt();
+            int energyAmount = buf.readInt();
             ItemStack output = buf.readItemStack();
-            return new GemEmpoweringRecipe(inputs, output);
+            return new GemEmpoweringRecipe(inputs, output, craftTime, energyAmount);
         }
 
         @Override
@@ -113,6 +125,8 @@ public class GemEmpoweringRecipe implements Recipe<SimpleInventory> {
             for (Ingredient ing : recipe.getIngredients()) {
                 ing.write(buf);
             }
+            buf.writeInt(recipe.craftTime);
+            buf.writeInt(recipe.energyAmount);
             buf.writeItemStack(recipe.getResult(null));
         }
     }

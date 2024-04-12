@@ -27,12 +27,16 @@ public class GemEmpoweringRecipeBuilder implements CraftingRecipeJsonBuilder {
     private final Item result;
     private final Ingredient ingredient;
     private final int count;
+    private final int craftTime;
+    private final int energyAmount;
     private final Advancement.Builder advancement = Advancement.Builder.create();
 
-    public GemEmpoweringRecipeBuilder(ItemConvertible ingredient, ItemConvertible result, int count) {
+    public GemEmpoweringRecipeBuilder(ItemConvertible ingredient, ItemConvertible result, int count, int craftTime, int energyAmount) {
         this.ingredient = Ingredient.ofItems(ingredient);
         this.result = result.asItem();
         this.count = count;
+        this.craftTime = craftTime;
+        this.energyAmount = energyAmount;
     }
 
     @Override
@@ -53,13 +57,13 @@ public class GemEmpoweringRecipeBuilder implements CraftingRecipeJsonBuilder {
 
     @Override
     public void offerTo(RecipeExporter exporter, Identifier recipeId) {
-     //   this.advancement.parent(new Identifier("recipes/root"))
-     //           .criterion("has_the_recipe", RecipeUnlockedCriterion.create(recipeId))
-     //           .rewards(AdvancementRewards.Builder.recipe(recipeId));
+        // this.advancement.parent(new Identifier("recipes/root"))
+        //         .criterion("has_the_recipe", RecipeUnlockedCriterion.create(recipeId))
+        //         .rewards(AdvancementRewards.Builder.recipe(recipeId));
 
         exporter.accept(new JsonBuilder(recipeId, this.result, this.count, this.ingredient,
                 this.advancement, new Identifier(recipeId.getNamespace(), "recipes/"
-                + recipeId.getPath())));
+                + recipeId.getPath()), this.craftTime, this.energyAmount));
     }
 
     public static class JsonBuilder implements RecipeJsonProvider {
@@ -67,17 +71,21 @@ public class GemEmpoweringRecipeBuilder implements CraftingRecipeJsonBuilder {
         private final Item result;
         private final Ingredient ingredient;
         private final int count;
+        private final int craftTime;
+        private final int energyAmount;
         private final Advancement.Builder advancement;
         private final Identifier advancementId;
 
         public JsonBuilder(Identifier id, Item result, int count, Ingredient ingredient,
-                           Advancement.Builder advancement, Identifier advancementId) {
+                           Advancement.Builder advancement, Identifier advancementId, int craftTime, int energyAmount) {
             this.id = id;
             this.result = result;
             this.ingredient = ingredient;
             this.count = count;
             this.advancement = advancement;
             this.advancementId = advancementId;
+            this.craftTime = craftTime;
+            this.energyAmount = energyAmount;
         }
 
         @Override
@@ -92,6 +100,8 @@ public class GemEmpoweringRecipeBuilder implements CraftingRecipeJsonBuilder {
                 jsonobject.addProperty("count", this.count);
             }
 
+            json.addProperty("craftTime", this.craftTime);
+            json.addProperty("energyAmount", this.energyAmount);
             json.add("output", jsonobject);
         }
 

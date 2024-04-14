@@ -81,6 +81,16 @@
   "block.mccourse.driftwood_sign": "Driftwood Sign",
   "block.mccourse.driftwood_hanging_sign": "Driftwood Hanging Sign",
 
+  "block.mccourse.ruby_block": "Block of Ruby",
+  "block.mccourse.ruby_block_1": "Block of Ruby 1",
+  "block.mccourse.ruby_block_2": "Block of Ruby 2",
+  "block.mccourse.ruby_block_3": "Block of Ruby 3",
+
+  "block.mccourse.waxed_ruby_block": "Waxed Block of Ruby",
+  "block.mccourse.waxed_ruby_block_1": "Waxed Block of Ruby 1",
+  "block.mccourse.waxed_ruby_block_2": "Waxed Block of Ruby 2",
+  "block.mccourse.waxed_ruby_block_3": "Waxed Block of Ruby 3",
+
   "block.mccourse.colored_leaves": "Colored Leaves",
 
   "item.mccourse.metal_detector.no_valuables": "No Valuables Found!",

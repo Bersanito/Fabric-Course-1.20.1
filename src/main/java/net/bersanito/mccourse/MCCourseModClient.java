@@ -8,6 +8,8 @@ import net.bersanito.mccourse.entity.client.MagicProjectileRenderer;
 import net.bersanito.mccourse.entity.client.PorcupineModel;
 import net.bersanito.mccourse.entity.client.PorcupineRenderer;
 import net.bersanito.mccourse.entity.layer.ModModelLayers;
+import net.bersanito.mccourse.screen.KaupenFurnaceScreen;
+import net.bersanito.mccourse.screen.KaupenFurnaceScreenHandler;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
@@ -67,6 +69,7 @@ public class MCCourseModClient implements ClientModInitializer {
         ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) -> new ModelIdentifier(MCCourseMod.MOD_ID, "radiation_staff_3d", "inventory"));
 
         HandledScreens.register(ModScreenHandlers.GEM_EMPOWERING_SCREEN_HANDLER, GemEmpoweringScreen::new);
+        HandledScreens.register(ModScreenHandlers.KAUPEN_FURNACE_SCREEN_HANDLER, KaupenFurnaceScreen::new);
 
         ModMessages.registerS2CPackets();
 

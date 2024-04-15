@@ -103,6 +103,8 @@ public class ModItemGroup {
                         entries.add(ModBlocks.WAXED_RUBY_BLOCK_2);
                         entries.add(ModBlocks.WAXED_RUBY_BLOCK_3);
 
+                        entries.add(ModBlocks.KAUPEN_FURNACE);
+
                     }).build());
 
     public static void registerItemGroups() {
